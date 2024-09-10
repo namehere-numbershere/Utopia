@@ -1,11 +1,11 @@
-FROM node:20.8.1-bullseye-slim
+FROM node:latest
 ENV NODE_ENV=production
 
 WORKDIR /app
 
 COPY ["package.json", "./"]
 
-RUN npm install
+RUN npm install -g npm@latest
 
 COPY . .
 
